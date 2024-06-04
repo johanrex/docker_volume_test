@@ -1,0 +1,11 @@
+services:
+  volumetestservice:
+    build:
+      context: ./volumetestservice
+      dockerfile: Dockerfile
+    image: alpine:latest
+    container_name: volumetestcontainer
+    volumes:
+      - volumetestservicefoldervolume:/var/log/volumetestservice/
+volumes:
+  volumetestservicefoldervolume:
